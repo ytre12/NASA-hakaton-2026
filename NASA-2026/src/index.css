@@ -4,6 +4,7 @@
 @theme {
   --font-sans: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-desk: 51.25rem; /* 820px — з цієї ширини меню стає бічним */
   --breakpoint-wide: 67.5rem; /* 1080px — у rem, щоб Tailwind сортував після sm */
 }
 

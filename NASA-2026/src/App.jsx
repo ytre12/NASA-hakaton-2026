@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Link } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
 import MainPage from "./pages/Main";
 import SongsPage from "./pages/Songs";

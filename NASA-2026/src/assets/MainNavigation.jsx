@@ -9,7 +9,7 @@ function Icon({ children }) {
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="size-5 shrink-0 sm:size-6"
+      className="size-5 shrink-0 desk:size-6"
       aria-hidden="true"
     >
       {children}
@@ -55,10 +55,10 @@ const LINKS = [
 
 export default function MainNavigation() {
   return (
-    // Мобільні (<640px): кнопки в рядок. Від 640px: вертикальний список.
+    // Мобільні (<820px): кнопки в рядок. Від 820px: вертикальний список.
     <nav
       aria-label="Головна навігація"
-      className="flex flex-row gap-2 sm:flex-col sm:gap-3"
+      className="flex flex-row gap-2 desk:flex-col desk:gap-3"
     >
       {LINKS.map(({ to, label, end, icon }) => (
         <NavLink
@@ -70,7 +70,7 @@ export default function MainNavigation() {
             [
               "group flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-2xl border px-2 py-3",
               "text-center text-[11px] font-semibold transition duration-200",
-              "sm:flex-row sm:justify-start sm:gap-3 sm:px-4 sm:py-3 sm:text-left sm:text-sm",
+              "desk:flex-row desk:justify-start desk:gap-3 desk:px-4 desk:py-3 desk:text-left desk:text-sm",
               isActive
                 ? "border-[#e7f434] bg-[#e7f434]/15 text-white shadow-lg shadow-black/25"
                 : "border-white/10 bg-white/5 text-blue-100 hover:-translate-y-0.5 hover:border-[#e7f434]/60 hover:bg-white/10 hover:text-white",

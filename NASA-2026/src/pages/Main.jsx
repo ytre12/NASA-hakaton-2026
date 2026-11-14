@@ -55,35 +55,18 @@ export default function MainPage() {
         </div>
       </section>
 
-      {/* Аудіо (поки без плеєра) */}
+      {/* Аудіо */}
       <section className="flex flex-col gap-4">
         <SectionTitle>Аудіо результату роботи алгоритму</SectionTitle>
-        {/* <div className="flex items-center gap-4 rounded-2xl border border-dashed border-[#1b2b85]/25 bg-white/70 p-6">
-          <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-[#1b2b85]/10 text-[#1b2b85]">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="size-6"
-              aria-hidden="true"
-            >
-              <path d="M9 18V5l12-2v13" />
-              <circle cx="6" cy="18" r="3" />
-              <circle cx="18" cy="16" r="3" />
-            </svg>
-          </span>
-          <div>
-            <p className="font-semibold text-[#1b2b85]">
-              Аудіо ще генерується
-            </p>
-            <p className="mt-1 text-sm text-slate-600">
-              Музичний супровід з&apos;явиться тут одразу після обробки відео.
-            </p>
-          </div>
-        </div> */}
+        <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
+          <audio controls preload="metadata" className="w-full">
+            <source
+              src={`${import.meta.env.BASE_URL}songs/main.mp3`}
+              type="audio/mpeg"
+            />
+            Ваш браузер не підтримує відтворення цього файлу.
+          </audio>
+        </div>
       </section>
 
       {/* Перехід до результатів */}
