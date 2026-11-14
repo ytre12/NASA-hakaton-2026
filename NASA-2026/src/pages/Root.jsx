@@ -21,8 +21,8 @@ export default function RootLayout() {
       {/* На мобільних шапка стоїть зверху окремо, а не разом із меню внизу */}
       <BrandHeader className="w-full sm:hidden" />
 
-      {/* Бічне меню: від 640px — фіксовані 250px (не звужується), до 640px — знизу */}
-      <aside className="order-last w-full shrink-0 bg-[#1b2b85] text-white sm:sticky sm:top-0 sm:order-first sm:h-screen sm:w-[250px] sm:overflow-y-auto">
+      {/* Бічне меню: до 640px — знизу; 640–1079px — 250px; від 1080px — 300px */}
+      <aside className="order-last w-full shrink-0 bg-[#1b2b85] text-white sm:sticky sm:top-0 sm:order-first sm:h-screen sm:w-[250px] sm:overflow-y-auto wide:w-[300px]">
         <div className="flex h-full flex-col">
           <BrandHeader className="hidden sm:block" />
 
