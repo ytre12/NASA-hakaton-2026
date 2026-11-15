@@ -12,21 +12,21 @@ const SONGS = [
     title: "Друга мелодія",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move zooms in on the eastern United States.",
-    audio: "",
+    audio: "videoeastedit.mp3",
     video: { type: "youtube", id: "Kz6TuIggX-E" },
   },
   {
     title: "Третя мелодія",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move zooms in on the western United States.",
-    audio: "",
+    audio: "videowestedit.mp3",
     video: { type: "youtube", id: "2_LgGxUnqls" },
   },
   {
     title: "Четверта мелодія",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move is more experimental and attempts to fly through the data, starting from the East coast and heading west. The middle of the video is quite dark because of the density of the CO2.",
-    audio: "",
+    audio: "prorotypeedit.mp3",
     video: { type: "youtube", id: "tr93XeWa1cs" },
   },
 ];
