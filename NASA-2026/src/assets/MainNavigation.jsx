@@ -68,7 +68,7 @@ export default function MainNavigation() {
           title={label}
           className={({ isActive }) =>
             [
-              "group flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-2xl border px-2 py-3",
+              "group flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-2xl border px-2 py-1.5",
               "text-center text-[11px] font-semibold transition duration-200",
               "desk:flex-row desk:justify-start desk:gap-3 desk:px-4 desk:py-3 desk:text-left desk:text-sm",
               isActive

@@ -17,7 +17,7 @@ function BrandHeader({ className = "" }) {
 
 export default function RootLayout() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#f4f6ff] text-slate-900 pb-28 desk:flex-row desk:pb-0">
+    <div className="flex min-h-screen flex-col bg-[#f4f6ff] text-slate-900 pb-24 desk:flex-row desk:pb-0">
       {/* На мобільних шапка стоїть зверху окремо, а не разом із меню внизу */}
       <BrandHeader className="w-full desk:hidden" />
 
@@ -26,7 +26,7 @@ export default function RootLayout() {
         <div className="flex h-full flex-col">
           <BrandHeader className="hidden desk:block" />
 
-          <div className="flex flex-1 flex-col gap-8 p-5 desk:p-6">
+          <div className="flex flex-1 flex-col gap-8 p-3 desk:p-6">
             <MainNavigation />
 
             <p className="mt-auto hidden text-xs leading-relaxed text-blue-200/70 desk:block">
