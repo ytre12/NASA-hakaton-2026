@@ -23,22 +23,22 @@ export default function MainPage() {
           The Earth Information Jukebox
         </h1>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-blue-100 sm:text-lg">
-          У рамках технічного завдання Хакатону NASA: Space App Challenge, теми
-          The Earth Information Jukebox було розроблено{" "}
+          As part of the NASA Space Apps Challenge 2026 technical brief on the
+          theme The Earth Information Jukebox, we developed{" "}
           <Link
             to="/tehnology"
             className="font-semibold text-[#e7f434] underline decoration-[#e7f434]/50 underline-offset-4 transition hover:decoration-[#e7f434]"
           >
-            алгоритм створення
+            an algorithm for generating
           </Link>{" "}
-          аудіосупроводу на основі наданої відеомоделі викидів CO₂ мовою
-          програмування Python.
+          audio accompaniment from the provided CO₂ emissions video model using
+          the Python programming language.
         </p>
       </section>
 
       {/* Відео */}
       <section className="flex flex-col gap-4">
-        <SectionTitle>Відео результату роботи алгоритму</SectionTitle>
+        <SectionTitle>Algorithm output video</SectionTitle>
         <div className="overflow-hidden rounded-2xl border border-[#1b2b85]/10 bg-black shadow-lg">
           <video
             controls
@@ -50,21 +50,21 @@ export default function MainPage() {
               src={`${import.meta.env.BASE_URL}video/main.mp4`}
               type="video/mp4"
             />
-            Ваш браузер не підтримує відтворення цього відео.
+            Your browser does not support video playback.
           </video>
         </div>
       </section>
 
       {/* Аудіо */}
       <section className="flex flex-col gap-4">
-        <SectionTitle>Аудіо результату роботи алгоритму</SectionTitle>
+        <SectionTitle>Algorithm output audio</SectionTitle>
         <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
           <audio controls preload="metadata" className="w-full">
             <source
               src={`${import.meta.env.BASE_URL}songs/main.mp3`}
               type="audio/mpeg"
             />
-            Ваш браузер не підтримує відтворення цього файлу.
+            Your browser does not support playback of this file.
           </audio>
         </div>
       </section>
@@ -72,26 +72,27 @@ export default function MainPage() {
       {/* Перехід до результатів */}
       <section className="flex flex-col gap-5 rounded-2xl bg-white p-6 shadow-md sm:flex-row sm:items-center sm:justify-between sm:p-8">
         <p className="text-slate-700">
-          Переглянути всі результати можна у вкладці{" "}
+          All results can be viewed in the{" "}
           <Link
             to="/songs"
             className="font-semibold text-[#0050d8] underline decoration-[#0050d8]/50 underline-offset-4 transition hover:decoration-[#0050d8]"
           >
-            Мелодії
-          </Link>
+            Melodies
+          </Link>{" "}
+          tab.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link
             to="/tehnology"
             className="inline-flex items-center justify-center rounded-xl bg-[#1b2b85] px-6 py-3 font-bold text-[#e7f434] shadow-md transition hover:-translate-y-0.5 hover:bg-[#16236b] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1b2b85]"
           >
-            До алгоритму
+            About the algorithm
           </Link>
           <Link
             to="/songs"
             className="inline-flex items-center justify-center rounded-xl border-2 border-[#1b2b85] bg-white px-6 py-3 font-bold text-[#1b2b85] transition hover:-translate-y-0.5 hover:bg-[#1b2b85] hover:text-[#e7f434] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1b2b85]"
           >
-            До мелодій
+            Browse melodies
           </Link>
         </div>
       </section>

@@ -20,7 +20,7 @@ function Icon({ children }) {
 const LINKS = [
   {
     to: "/",
-    label: "Головна",
+    label: "Home",
     end: true,
     icon: (
       <Icon>
@@ -32,7 +32,7 @@ const LINKS = [
   },
   {
     to: "/songs",
-    label: "Мелодії",
+    label: "Melodies",
     icon: (
       <Icon>
         <path d="M9 18V5l12-2v13" />
@@ -43,7 +43,7 @@ const LINKS = [
   },
   {
     to: "/tehnology",
-    label: "Алгоритм",
+    label: "Algorithm",
     icon: (
       <Icon>
         <rect x="6" y="6" width="12" height="12" rx="2" />
@@ -57,7 +57,7 @@ export default function MainNavigation() {
   return (
     // Мобільні (<820px): кнопки в рядок. Від 820px: вертикальний список.
     <nav
-      aria-label="Головна навігація"
+      aria-label="Main navigation"
       className="flex flex-row gap-2 desk:flex-col desk:gap-3"
     >
       {LINKS.map(({ to, label, end, icon }) => (

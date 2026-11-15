@@ -2,28 +2,28 @@ import { MediaPlaceholder, PageHero } from "../assets/ui";
 
 const SONGS = [
   {
-    title: "Перша мелодія",
+    title: "First melody",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move orbits the Earth from a distance.",
     audio: "main.mp3",
     video: { type: "file", src: "main.mp4" },
   },
   {
-    title: "Друга мелодія",
+    title: "Second melody",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move zooms in on the eastern United States.",
     audio: "videoeastedit.mp3",
     video: { type: "youtube", id: "Kz6TuIggX-E" },
   },
   {
-    title: "Третя мелодія",
+    title: "Third melody",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move zooms in on the western United States.",
     audio: "videowestedit.mp3",
     video: { type: "youtube", id: "2_LgGxUnqls" },
   },
   {
-    title: "Четверта мелодія",
+    title: "Fourth melody",
     description:
       "Global CO2 ppm for January-March of 2020. This camera move is more experimental and attempts to fly through the data, starting from the East coast and heading west. The middle of the video is quite dark because of the density of the CO2.",
     audio: "prorotypeedit.mp3",
@@ -38,7 +38,7 @@ function SongVideo({ song }) {
         <iframe
           className="size-full"
           src={`https://www.youtube-nocookie.com/embed/${song.video.id}`}
-          title={`Відео мелодії: ${song.title}`}
+          title={`Melody video: ${song.title}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
@@ -55,7 +55,7 @@ function SongVideo({ song }) {
         className="w-full rounded-2xl"
         src={`${import.meta.env.BASE_URL}video/${song.video.src}`}
       >
-        Ваш браузер не підтримує відтворення цього відео.
+        Your browser does not support video playback.
       </video>
     );
   }
@@ -63,8 +63,8 @@ function SongVideo({ song }) {
   return (
     <MediaPlaceholder
       kind="video"
-      title="Відео ще не додано"
-      note="Відео з'явиться після завершення обробки."
+      title="Video not added yet"
+      note="The video will appear once processing is complete."
     />
   );
 }
@@ -72,8 +72,8 @@ function SongVideo({ song }) {
 export default function SongsPage() {
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-10">
-      <PageHero badge="Результати" title="Всі мелодії">
-        Тут зібрані мелодії, згенеровані з відео викидів CO₂.
+      <PageHero badge="Results" title="All melodies">
+        Melodies generated from CO₂ emissions videos are collected here.
       </PageHero>
 
       <div className="flex flex-col gap-8">
@@ -96,14 +96,14 @@ export default function SongsPage() {
             <div className="mt-6 flex flex-col gap-5">
               <div>
                 <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                  Відео мелодії
+                  Melody video
                 </h3>
                 <SongVideo song={song} />
               </div>
 
               <div>
                 <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                  Аудіо мелодії
+                  Melody audio
                 </h3>
                 {song.audio ? (
                   <audio controls preload="metadata" className="w-full">
@@ -111,13 +111,13 @@ export default function SongsPage() {
                       src={`${import.meta.env.BASE_URL}songs/${song.audio}`}
                       type="audio/mpeg"
                     />
-                    Ваш браузер не підтримує відтворення цього файлу.
+                    Your browser does not support playback of this file.
                   </audio>
                 ) : (
                   <MediaPlaceholder
                     kind="audio"
-                    title="Аудіо ще не додано"
-                    note="Музичний супровід з'явиться після генерації."
+                    title="Audio not added yet"
+                    note="The music track will appear after generation."
                   />
                 )}
               </div>
